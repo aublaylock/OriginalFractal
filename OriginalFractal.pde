@@ -2,7 +2,7 @@ float rX = 0;
 float rY = 0;
 float scrX = 0;
 float scrY = 0;
-int depth = 1;
+int depth = 0;
 
 void setup(){
   size(1000,1000,P3D);
