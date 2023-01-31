@@ -21,6 +21,7 @@ void sponge(int x, int y, int z, int size, int depth){
   translate(x,y,z);
   rotateX(rX);
   rotateY(rY);
+  text(""+size, 500,500);
   if(size==2)
     fill(237, 247, 181);
   if(size==7)
