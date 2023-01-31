@@ -21,16 +21,16 @@ void sponge(int x, int y, int z, int size, int depth){
   translate(x,y,z);
   rotateX(rX);
   rotateY(rY);
-  text(""+size, 500,500);
-  if(size==2)
+  text(""+(int)size, 500,500);
+  if((int)size==2)
     fill(237, 247, 181);
-  if(size==7)
+  if((int)size==7)
     fill(237, 247, 210);
-  if(size==22)
+  if((int)size==22)
     fill(201, 193, 159);
-  if(size==66)
+  if((int)size==66)
     fill(125, 124, 122);
-  if(size==200)
+  if((int)size==200)
     fill(91, 91, 91);
   box(size);
   popMatrix();
