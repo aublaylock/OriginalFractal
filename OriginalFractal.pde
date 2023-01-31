@@ -27,7 +27,7 @@ void sponge(int x, int y, int z, int size, int depth){
   translate(x,y,z);
   rotateX(rX);
   rotateY(rY);
-  fill(0, size, 0);
+  fill(0, size/2+100, 0);
   box(size);
   popMatrix();
   
