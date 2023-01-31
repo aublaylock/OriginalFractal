@@ -13,12 +13,6 @@ void draw(){
   background(255,255,255);
   rX+=0.01;
   rY+=0.01;
-
-  scrX+=0.01;
-  scrY+=0.01;
-  translate(250,250,0);
-  rotateX(scrX);
-  rotateY(scrY);
   sponge(500,500,0,200, depth);
 }
 
@@ -27,7 +21,16 @@ void sponge(int x, int y, int z, int size, int depth){
   translate(x,y,z);
   rotateX(rX);
   rotateY(rY);
-  fill(0, size/2+100, 0);
+  if(size==2)
+    fill(237, 247, 181);
+  if(size==7)
+    fill(237, 247, 210);
+  if(size==22)
+    fill(201, 193, 159);
+  if(size==66)
+    fill(125, 124, 122);
+  if(size==200)
+    fill(91, 91, 91);
   box(size);
   popMatrix();
   
@@ -45,7 +48,10 @@ void sponge(int x, int y, int z, int size, int depth){
 }
 
 void keyPressed(){
-  if(key == ' '){
+  if(keyCode == UP && depth<4){
     depth++;
+  }
+  if(keyCode == DOWN && depth>0){
+    depth--;
   }
 }
